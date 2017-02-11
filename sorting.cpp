@@ -83,11 +83,11 @@ void heapSort(vector<int> data, int count,long& heap_sort_timer)
 	{
 		temp=data[0];
 		/// swap the root (maximum value) of the heap with the last elemen of the heap
-			data[0]=data[end];
+		data[0]=data[end];
 		data[end]=temp;
 		end=end-1;
 		/// decrease the size of the heap by one so that the previous max value will stay in its proper placement
-			shiftDown(data,0,end,heap_sort_timer);
+		shiftDown(data,0,end,heap_sort_timer);
 		/// put the heap back in max-heap order
 		heap_sort_timer++;
 	}
