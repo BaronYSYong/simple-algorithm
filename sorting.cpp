@@ -13,7 +13,7 @@
 #include <vector>
 
 using namespace std;
-void bubblesort(vector<int> data, int count, long& bubble_sort_timer)
+void bubblesort(vector<int> &data, int count, long& bubble_sort_timer)
 {
 	int i, j, temp;
 	for (i=0; i<count; i++)
@@ -28,7 +28,7 @@ void bubblesort(vector<int> data, int count, long& bubble_sort_timer)
 			bubble_sort_timer++;
 		}
 }
-void shiftDown(vector<int> data, int start, int end, long& heap_sort_timer)
+void shiftDown(vector<int> &data, int start, int end, long& heap_sort_timer)
 {
 	int root=start;
 	int temp;
@@ -60,7 +60,7 @@ void shiftDown(vector<int> data, int start, int end, long& heap_sort_timer)
 		heap_sort_timer++;
 	}
 }
-void heapify(vector<int> data, int count, long& heap_sort_timer)
+void heapify(vector<int> &data, int count, long& heap_sort_timer)
 {
 	int start=count/2-1;
 	while(start>=0)
@@ -73,7 +73,7 @@ void heapify(vector<int> data, int count, long& heap_sort_timer)
 	}
 }
 
-void heapSort(vector<int> data, int count,long& heap_sort_timer)
+void heapSort(vector<int> &data, int count,long& heap_sort_timer)
 {
     /// first place a in max-heap order
 	heapify(data,count, heap_sort_timer); 
@@ -95,8 +95,9 @@ void heapSort(vector<int> data, int count,long& heap_sort_timer)
 int main()
 {
 	char next;
-	/// randomize all input data
 	ofstream outputFile("result.csv");
+	ofstream BubbleSortResult("BubbleSort.csv");
+	ofstream HeapSortResult("HeapSort.csv");
 	if(!outputFile)
 	{
 		cout<<"File could not be opened\n";
@@ -106,18 +107,26 @@ int main()
 	do
 	{
 		int count=0;
-		vector<int> data;
         /// reset the timer
 		long bubble_sort_timer=0; 
 		long heap_sort_timer=0;
 		cout<<"How many numbers you wanna sort?: ";
 		cin>>count;
+		vector<int> data1, data2;
 		for(int i=0; i<count; i++)
-			data.push_back(rand());
-		bubblesort(data, count, bubble_sort_timer);
+			data1.push_back(rand());
+		data2 = data1;
+		
+		bubblesort(data1, count, bubble_sort_timer);
 		cout<<"Calculation time by using bubble sort: "<<bubble_sort_timer<<endl;
-		heapSort(data, count, heap_sort_timer);
+		for(int i=0; i<count; i++)
+			BubbleSortResult<<data1[i]<<endl;
+			
+		heapSort(data2, count, heap_sort_timer);
 		cout<<"Calculation time by using heap sort: "<<heap_sort_timer<<endl;
+		for(int i=0; i<count; i++)
+			HeapSortResult<<data2[i]<<endl;
+			
 		outputFile<<count<<"\t\t"<<bubble_sort_timer<<"\t\t"<<heap_sort_timer<<endl;
 		/// export all data to "result.xls"
 		cout<<"Do you still wanna continue? (Press 'Y' or 'y' to continue): ";
