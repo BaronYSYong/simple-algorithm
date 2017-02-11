@@ -120,18 +120,20 @@ int main()
 		bubblesort(data1, count, bubble_sort_timer);
 		cout<<"Calculation time by using bubble sort: "<<bubble_sort_timer<<endl;
 		for(int i=0; i<count; i++)
-			BubbleSortResult<<data1[i]<<endl;
+			BubbleSortResult << data1[i] << endl;
+		BubbleSortResult << endl;
 			
 		heapSort(data2, count, heap_sort_timer);
 		cout<<"Calculation time by using heap sort: "<<heap_sort_timer<<endl;
 		for(int i=0; i<count; i++)
-			HeapSortResult<<data2[i]<<endl;
+			HeapSortResult << data2[i] << endl;
+		HeapSortResult << endl;
 			
-		outputFile<<count<<"\t\t"<<bubble_sort_timer<<"\t\t"<<heap_sort_timer<<endl;
+		outputFile << count << "\t\t" << bubble_sort_timer << "\t\t" << heap_sort_timer << endl;
 		/// export all data to "result.xls"
-		cout<<"Do you still wanna continue? (Press 'Y' or 'y' to continue): ";
-		cin>>next;
+		cout << "Do you still wanna continue? (Press 'Y' or 'y' to continue): ";
+		cin >> next;
 		/// the programming is continued if 'Y' or 'y' is keyed in
-		cout<<endl;
+		cout << endl;
 	} while(next=='Y'||next=='y');
 }
