@@ -10,3 +10,4 @@
 
 * SA
     * https://www.youtube.com/watch?v=VAIQApdbtgo
+    * http://csg.sph.umich.edu/abecasis/class/2006/615.19.pdf
