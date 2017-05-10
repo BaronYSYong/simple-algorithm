@@ -11,3 +11,12 @@
 * SA
     * https://www.youtube.com/watch?v=VAIQApdbtgo
     * http://csg.sph.umich.edu/abecasis/class/2006/615.19.pdf
+
+## Reference
+* Binary search algorithm
+    * https://en.wikipedia.org/wiki/Binary_search_algorithm
+
+* Hash table
+    * https://en.wikipedia.org/wiki/Hash_table
+    
+    
