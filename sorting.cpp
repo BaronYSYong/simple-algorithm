@@ -2,7 +2,7 @@
  * @file  sorting.cpp
  * @brief Compare bubble sort and Heap sort
  * @brief My old assignment when I was in The University of Tokyo
- * @date 2017/02/10
+ * @date 2012/02/10
  * @author YoonSeong Yong 
  * 
  */
