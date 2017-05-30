@@ -14,16 +14,16 @@ def drange(x, y, jump):
 def ThirdOrderInterpolation(time, position, velocity):
     '''
     time[0]: initial time
-    time[1] : final time
+    time[-1] : final time
     position[0]: initial position
-    position[1]: final position
+    position[-1]: final position
     velocity[0]: initial velocity
-    velocity[1]: final velocity
+    velocity[-1]: final velocity
     '''    
     a0 = position[0] # initial position
     a1 = velocity[0] # initial velocity
-    a2 = (-3*(position[0]-position[1]) - (2*velocity[0]+velocity[1])*time[1]) / pow(time[1],2)
-    a3 = (2*(position[0]-position[1]) + (velocity[0]+velocity[1])*time[1]) / pow(time[1],3)
+    a2 = (-3*(position[0]-position[-1]) - (2*velocity[0]+velocity[-1])*time[-1]) / pow(time[-1],2)
+    a3 = (2*(position[0]-position[-1]) + (velocity[0]+velocity[-1])*time[-1]) / pow(time[-1],3)
     
     instant = []
     disp = []
