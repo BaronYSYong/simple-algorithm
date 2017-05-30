@@ -1,4 +1,15 @@
+"""
+Resource:
+http://www-lar.deis.unibo.it/people/cmelchiorri/Files_Robotica/FIR_07_Traj_1.pdf
+"""
+
 import matplotlib.pyplot as plt
+import decimal
+
+def drange(x, y, jump):
+    while x < y:
+        yield float(x)
+        x += decimal.Decimal(jump)
 
 def ThirdOrderInterpolation(time, position, velocity):
     '''
@@ -19,8 +30,7 @@ def ThirdOrderInterpolation(time, position, velocity):
     vel = []
     acc = []
     
-    for t in range(time[1]*10+1):
-        t = t*0.1
+    for t in list(drange(time[0], time[1], '0.1'))+[time[1]]:
         instant.append(t)
         disp.append(a0 + a1*t + a2*pow(t,2) + a3*pow(t,3))
         vel.append(a1 + 2*a2*t + 3*a3*pow(t,2))
@@ -43,7 +53,16 @@ def PlotGraph(instant, disp, vel, acc):
     plt.show()
         
 if __name__ == '__main__':
+    #~ instant1, disp1, vel1, acc1 = ThirdOrderInterpolation([0,2], [10,20], [0,-10])
+    #~ instant2, disp2, vel2, acc2 = ThirdOrderInterpolation([2,4], [20,0], [-10,20])
+    #~ instant3, disp3, vel3, acc3 = ThirdOrderInterpolation([4,8], [0,30], [20,3])
+    #~ instant4, disp4, vel4, acc4 = ThirdOrderInterpolation([8,10], [30,40], [3,0])
+    #~ instant = instant1+instant2+instant3+instant4
+    #~ disp = disp1+disp2+disp3+disp4
+    #~ vel = vel1+vel2+vel3+vel4
+    #~ acc = acc1 + acc2 + acc3 + acc4
+    #~ PlotGraph(instant, disp, vel, acc)
     instant, disp, vel, acc = ThirdOrderInterpolation([0,1], [10,30], [0,0])
-    PlotGraph(instant, disp, vel, acc)
+    PlotGraph(instant, disp, vel, acc)    
     instant, disp, vel, acc = ThirdOrderInterpolation([0,1], [10,30], [-20,-50])
-    PlotGraph(instant, disp, vel, acc)
+    PlotGraph(instant, disp, vel, acc)   
