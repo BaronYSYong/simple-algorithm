@@ -1,6 +1,6 @@
 """
-Resource:
-http://www-lar.deis.unibo.it/people/cmelchiorri/Files_Robotica/FIR_07_Traj_1.pdf
+:Resource:
+    http://www-lar.deis.unibo.it/people/cmelchiorri/Files_Robotica/FIR_07_Traj_1.pdf
 """
 
 import decimal
@@ -11,14 +11,16 @@ def drange(x, y, jump):
         x += decimal.Decimal(jump)
 
 def ThirdOrderPolynomial(time, position, velocity):
-    '''
-    time[0]: initial time
-    time[-1] : final time
-    position[0]: initial position
-    position[-1]: final position
-    velocity[0]: initial velocity
-    velocity[-1]: final velocity
-    '''    
+    """
+    :param time: [initial_time, final_time]
+    :type time: list
+    :param position: [initial_position, final_position]
+    :type position: list
+    :param velocity: [initial_velocity, final_velocity]
+    :type velocity: list
+    :return: instant, disp, vel, acc
+    :rtype: lists
+    """    
     a0 = position[0] # initial position
     a1 = velocity[0] # initial velocity
     a2 = (-3.0*(position[0]-position[-1]) - (2.0*velocity[0]+velocity[-1])*time[-1]) / pow(time[-1],2)
@@ -37,14 +39,17 @@ def ThirdOrderPolynomial(time, position, velocity):
     return instant, disp, vel, acc
 
 def ThirdOrderPolynomialMultiPoints(time, position, velocity):
-    '''
-    time[0]: initial time
-    time[-1] : final time
-    position[0]: initial position
-    position[-1]: final position
-    velocity[0]: initial velocity
-    velocity[-1]: final velocity
-    '''    
+    """
+    :TODO: complete the multi points
+    :param time: [initial_time, ..., final_time]
+    :type time: list
+    :param position: [initial_position, ..., final_position]
+    :type position: list
+    :param velocity: [initial_velocity, ..., final_velocity]
+    :type velocity: list
+    :return: instant, disp, vel, acc
+    :rtype: lists
+    """       
     a0 = position[0] # initial position
     a1 = velocity[0] # initial velocity
     a2 = (-3.0*(position[0]-position[-1]) - (2*velocity[0]+velocity[-1])*(time[-1]-time[0])) / pow(time[-1]-time[0],2)
@@ -65,6 +70,18 @@ def ThirdOrderPolynomialMultiPoints(time, position, velocity):
     return instant, disp, vel, acc
 
 def FifthOrderPolynomial(time, position, velocity, acceleration):
+    """
+    :param time: [initial_time, final_time]
+    :type time: list
+    :param position: [initial_position, final_position]
+    :type position: list
+    :param velocity: [initial_velocity, final_velocity]
+    :type velocity: list
+    :param acceleration: [initial_acceleration, final_acceleration]
+    :type acceleration: list    
+    :return: instant, disp, vel, acc
+    :rtype: lists
+    """   
     T = time[-1] - time[0]
     a0 = position[0] # initial position
     a1 = velocity[0] # initial velocity
