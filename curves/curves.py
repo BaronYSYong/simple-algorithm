@@ -67,7 +67,7 @@ class Curves(object):
     
     def Spiral(self, a, n):
         """
-        a = radius
+        radius = a*6
         n = number of circles
         """
         t = range(0,360*n)
@@ -78,4 +78,18 @@ class Curves(object):
             i = self.deg2rad(i)
             x.append(a*i*math.cos(i))    
             y.append(a*i*math.sin(i))  
+        return x, y
+
+    def Parabola(self, angle, shift_x, shift_y):
+        """
+        Reference: https://www.youtube.com/watch?v=BPgq2AudoEo
+        y = x**2
+        """
+        t = range(-10,11)
+        angle = self.deg2rad(angle)
+        x = []
+        y = []         
+        for i in t:
+            x.append((i*math.cos(angle) - (i**2)*math.sin(angle)) + shift_x)    
+            y.append((i*math.sin(angle) + (i**2)*math.cos(angle)) + shift_y)    
         return x, y
