@@ -3,21 +3,12 @@ Reference:
     https://elepa.files.wordpress.com/2013/11/fifty-famous-curves.pdf
 """
 
-import matplotlib.pyplot as plt
 import math
 
 class Curves(object):
     def deg2rad(self, pos):
-        return pos*math.pi/180.0  
-    
-    def Plot2DGraph(self, x, y, title):
-        plt.plot(x,y,'g')
-        plt.grid()
-        plt.xlabel('x')
-        plt.ylabel('y')
-        plt.title(title)
-        plt.show()          
-        
+        return pos*math.pi/180.0    
+            
     def Lissajous(self, a, b, c, n):
         t = range(-180,180)
         x = []
