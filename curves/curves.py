@@ -82,8 +82,12 @@ class Curves(object):
 
     def Parabola(self, angle, shift_x, shift_y):
         """
-        Reference: https://www.youtube.com/watch?v=BPgq2AudoEo
-        y = x**2
+        Reference: 
+            https://www.youtube.com/watch?v=BPgq2AudoEo
+            https://help.geogebra.org/topic/how-do-you-rotate-a-parabola-
+        if f(x) = x^2
+        x(t) = x cos(a) - f(x)sin(a)
+        y(t) = x sin(a) + f(x)cos(a)
         """
         t = range(-10,11)
         angle = self.deg2rad(angle)
