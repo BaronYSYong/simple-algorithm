@@ -6,3 +6,5 @@
 * http://www-groups.dcs.st-and.ac.uk/history/Curves/Epitrochoid.html
 * https://elepa.files.wordpress.com/2013/11/fifty-famous-curves.pdf
 * http://www.mathematische-basteleien.de/spiral.htm
+* https://help.geogebra.org/topic/how-do-you-rotate-a-parabola-
+* http://tutorial.math.lamar.edu/Classes/CalcII/ParametricEqn.aspx
