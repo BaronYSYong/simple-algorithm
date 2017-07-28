@@ -19,6 +19,7 @@
 * [Big O notation](https://en.wikipedia.org/wiki/Big_O_notation)
     * https://stackoverflow.com/questions/2307283/what-does-olog-n-mean-exactly
 * [Heapsort](https://en.wikipedia.org/wiki/Heapsort)
-
-    
-    
+* Dynamic Programming
+    * http://www.geeksforgeeks.org/count-ways-reach-nth-stair/
+    * http://algorithms.tutorialhorizon.com/dynamic-programming-stairs-climbing-puzzle/
+    * http://www.geeksforgeeks.org/dynamic-programming-set-7-coin-change/
