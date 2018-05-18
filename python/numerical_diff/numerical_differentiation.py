@@ -37,3 +37,12 @@ def diff_5points(points, position):
 """
 2nd derivative approximation (obtained by Taylor polynomial)
 """
+def diff2_3points(points, position):
+    summation = 0.0
+    for i in range(len(points)-1):
+        summation += points[i+1][0] - points[i][0]
+    h = summation / (len(points)-1)
+    if position == 'middle':
+        return (points[0][1] - 2*points[1][1] + points[2][1]) / (h*h)
+    else:
+        return "error"
