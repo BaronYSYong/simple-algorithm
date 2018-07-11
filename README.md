@@ -11,6 +11,9 @@
 * SA
     * https://www.youtube.com/watch?v=VAIQApdbtgo
     * http://csg.sph.umich.edu/abecasis/class/2006/615.19.pdf
+* Signal Processing
+    * http://scipy-cookbook.readthedocs.io/items/idx_signal_processing.html
+
 
 ## Reference
 * [Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
