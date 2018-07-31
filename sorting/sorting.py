@@ -89,7 +89,7 @@ class Sorting(object):
             self.heapify(arr, i, 0)
  
 if __name__ == '__main__':
-    arr1 = arr2 = arr3 = [random.randint(0,999999) for r in range(100000)]
+    arr1 = arr2 = arr3 = [random.randint(0,999999) for r in range(10000)]
     sorting = Sorting()
     
     start = time.time()
@@ -104,10 +104,6 @@ if __name__ == '__main__':
     sorting.heapSort(arr3)
     heap_time = time.time() - start
     
-    #~ print ("Sorted array is:")
-    #~ for i in range(len(arr1)):
-        #~ print ("%d" %arr1[i]),
-
     print ("quickSort: %f seconds" %quick_time)
     print ("bubbleSort: %f seconds" %bubble_time)
     print ("heapSort: %f seconds" %heap_time)

@@ -3,7 +3,8 @@
  * @brief swap without temp
  * @date 2017/07/28
  * @author YoonSeong Yong 
- * 
+ * @brief Command to build:
+ * 		g++ swap.cpp -o swap
  */
 
 
@@ -20,12 +21,6 @@ void swap2(float &x, float &y){
     y = x / y;
     x = x / y;
 }
-
-//~ void swap3(float &x, float &y){
-    //~ x = x ^ y;
-    //~ y = x ^ y;
-    //~ x = x ^ y;
-//~ }
 
 int main(){
     float a = 3.142, b = 9.1244;

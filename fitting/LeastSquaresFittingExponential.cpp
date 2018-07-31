@@ -4,7 +4,8 @@
  * refer http://mathworld.wolfram.com/LeastSquaresFittingExponential.html
  * @date 2015/06/16
  * @author YoonSeong Yong 
- * 
+ * @brief Command to build:
+ * 		g++ LeastSquaresFittingExponential.cpp -o LeastSquaresFittingExponential
  */
 
 #include <iostream>  

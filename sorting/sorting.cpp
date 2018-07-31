@@ -4,7 +4,8 @@
  * @brief My old assignment when I was in The University of Tokyo
  * @date 2012/02/10
  * @author YoonSeong Yong 
- * 
+ * @brief Command to build: 
+ * 		g++ sorting.cpp -o sorting
  */
 
 #include <iostream>
