@@ -9,3 +9,4 @@
     * https://www.youtube.com/watch?v=-L-WgKMFuhE
 * [Beizer Curve](https://www.youtube.com/watch?v=2HvH9cmHbG4&list=WL&index=183&t=1316s)
 * [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance)
+* http://mathworld.wolfram.com/MeanDeviation.html
