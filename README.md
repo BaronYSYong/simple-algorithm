@@ -11,3 +11,4 @@
 * [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance)
 * http://mathworld.wolfram.com/MeanDeviation.html
 * [Taxicab_geometry (Manhattan distance)](https://en.wikipedia.org/wiki/Taxicab_geometry)
+* [Kadane's Algorithm](https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d)
